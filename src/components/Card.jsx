@@ -1,10 +1,12 @@
+import {Link} from 'react-router-dom'
 
 const Card = (props) => {
   return (
-    <section className="w-[240px] rounded-lg shadow-lg cursor-pointer hover:shadow-2xl transition-all duration-150 ">
+    <Link to={`country/${props.nombre}`} className="w-[240px] rounded-lg shadow-lg cursor-pointer hover:shadow-2xl transition-all duration-150 ">
       <article className="w-[240px] h-[156px] rounded-t-lg">
         <img src={props.imagen} alt="" className="w-full h-full object-cover rounded-t-lg"/>
       </article>
+      <a href=""></a>
       <article className="rounded-b-lg p-4">
         <h1 className="text-lg font-bold mb-2">
             {props.nombre}
@@ -28,7 +30,7 @@ const Card = (props) => {
             {props.capital}
         </h3>
       </article>
-    </section>
+    </Link>
   )
 }
 
